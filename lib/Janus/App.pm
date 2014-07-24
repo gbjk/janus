@@ -11,12 +11,12 @@ use DDP;
 
 has controller => (
     is      => 'ro',
-    isa     => 'Janus::Controller',
+    isa     => 'Janus::Controller::FogBugz',
     infer   => 1,
     );
 
 router as {
-    route "/janus/" => 'controller.process';
+    route "/.*/janus/fogbugz/:case_id/event/:event_id" => 'controller.case_event';
     };
 
 1;
