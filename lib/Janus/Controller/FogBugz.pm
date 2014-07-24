@@ -43,7 +43,7 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
         return "Created Trello case";
         }
 
-    return "Didn't create anything":
+    return "Didn't create anything";
     }
 
 1;
