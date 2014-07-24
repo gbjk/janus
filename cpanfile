@@ -10,6 +10,7 @@ requires "perl" => "v5.18.0";
 requires "WebService::FogBugz::XML" => "0";
 requires "Config::General";
 requires "LWP::Protocol::https";
+requires "WebService::Trello";
 
 
 on 'configure' => sub {
