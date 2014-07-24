@@ -9,8 +9,6 @@ use namespace::sweep;
 
 use DDP;
 
-use webXG::Config;
-
 has controller => (
     is      => 'ro',
     isa     => 'Janus::Controller',
