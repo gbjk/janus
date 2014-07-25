@@ -45,6 +45,7 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
             )->create;
         $case->trello_id( $card->id );
         $case->trello_order( $card->pos );
+        $case->trello_list( $card->list->name );
         $case->update;
         $self->debug("Created Trello card ".$card->id ." position ".$card->pos);
 

@@ -46,8 +46,8 @@ method event (OX::Request $r){
     my $case = @fb_cases[0];
 
     if ($action->{data}{listBefore} && $action->{data}{listAfter}) {
-        my $comment = sprintf('Moved task from %s to %s', map $_->{name}, @{$action->{data}}{qw/listBefore listAfter/});
-        $case->add_comment($comment);
+        $case->trello_list( $action->{data}{listAfter}{name} );
+        $case->update;
         }
 
     return "Ok";
