@@ -15,8 +15,15 @@ has controller => (
     infer   => 1,
     );
 
+has trello_controller => (
+    is      => 'ro',
+    isa     => 'Janus::Controller::Trello',
+    infer   => 1,
+    );
+
 router as {
     route "/.*/janus/fogbugz/:case_id/event/:event_id" => 'controller.case_event';
+    route "/.*/janus/trello"                           => 'trello_controller.event';
     };
 
 1;
