@@ -7,7 +7,7 @@ requires "common::sense" => "0";
 requires "lib" => "0";
 requires "namespace::sweep" => "0";
 requires "perl" => "v5.18.0";
-requires "WebService::FogBugz::XML" => "0";
+requires "WebService::FogBugz::XML" => "1.0101";
 requires "Config::General";
 requires "LWP::Protocol::https";
 requires "WebService::Trello";
