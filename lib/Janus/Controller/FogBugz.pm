@@ -36,11 +36,13 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
     my $trello_id = $case->trello_id;
 
     unless ($trello_id){
-        my $resp = WebService::Trello::Card->new(
+        my $card = WebService::Trello::Card->new(
             name    => $case->title,
             )->create;
-        warn "Got back ". p $resp;
-        return "Created Trello case";
+        $case->trello_id( $card->id );
+        $case->trello_order( $card->pos );
+        $case->update;
+        return "Created Trello card ".$card->id ." position ".$card->pos;
         }
 
     return "Didn't create anything";
