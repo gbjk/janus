@@ -45,8 +45,18 @@ method event (OX::Request $r){
     return "More than one case?" unless scalar @fb_cases == 1;
     my $case = @fb_cases[0];
 
+    my $case_changed = 0;
     if ($action->{data}{listBefore} && $action->{data}{listAfter}) {
         $case->trello_list( $action->{data}{listAfter}{name} );
+        $case_changed++;
+        }
+
+    if ($action->{data}{old}{pos}) {
+        $case->trello_order( $action->{data}{card}{pos} );
+        $case_changed++;
+        }
+
+    if ($case_changed) {
         $case->update;
         }
 
