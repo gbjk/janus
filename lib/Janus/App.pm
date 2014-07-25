@@ -30,7 +30,7 @@ has trello_controller => (
 
 router as {
     route "/.*/janus/fogbugz/case/:case_id/event/:event_id" => 'controller.case_event';
-    route "/.*/janus/fogbugz/:case_id/event/:event_id" => 'controller.case_event';
+    route "/.*/janus/trello"                           => 'trello_controller.event';
     };
 
 1;
