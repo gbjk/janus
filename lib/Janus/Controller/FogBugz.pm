@@ -36,6 +36,11 @@ has trello => (
 method case_event (OX::Request $r, Num $case_id, Num $event_id){
     my $case = $self->case( $case_id );
 
+    if ($case->last_scout_occurrence){
+        $self->debug("Skipping BugScout case");
+        return "SKIPPED";
+        }
+
     # Do I already have a trello?
     my $trello_id = $case->trello_id;
 
