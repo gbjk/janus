@@ -11,7 +11,7 @@ requires "WebService::FogBugz::XML" => "0";
 requires "Config::General";
 requires "LWP::Protocol::https";
 requires "WebService::Trello";
-
+requires "Starman";
 
 on 'configure' => sub {
   requires "ExtUtils::MakeMaker" => "6.30";
