@@ -13,6 +13,12 @@ use WebService::Trello::Card;
 use common::sense;
 use namespace::sweep;
 
+has log => (
+    is  => 'ro',
+    isa => 'Janus::Log',
+    handles     => [qw/debug/],
+    );
+
 has fb => (
     is      => 'ro',
     isa     => 'WebService::FogBugz::XML',
@@ -25,8 +31,6 @@ has trello => (
     is      => 'ro',
     isa     => 'WebService::Trello',
     default => sub { WebService::Trello->new },
-    handles => {
-        },
     );
 
 method case_event (OX::Request $r, Num $case_id, Num $event_id){
@@ -42,8 +46,11 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
         $case->trello_id( $card->id );
         $case->trello_order( $card->pos );
         $case->update;
+        $self->debug("Created Trello card ".$card->id ." position ".$card->pos);
         return "Created Trello card ".$card->id ." position ".$card->pos;
         }
+
+    $self->debug("Didn't create anything");
 
     return "Didn't create anything";
     }
