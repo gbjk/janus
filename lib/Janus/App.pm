@@ -9,10 +9,17 @@ use namespace::sweep;
 
 use DDP;
 
+has log => (
+    is          => 'ro',
+    isa         => 'Janus::Log',
+    lifecycle   => 'Singleton',
+    );
+
 has controller => (
     is      => 'ro',
     isa     => 'Janus::Controller::FogBugz',
     infer   => 1,
+    dependencies => [qw/log/],
     );
 
 router as {
