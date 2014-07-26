@@ -6,3 +6,4 @@
 * Add person/member for assignment
 * Show actively being worked on
 * /trello 200
+* Make live not use uid prefix, and update fb trigger.
