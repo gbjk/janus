@@ -5,5 +5,4 @@
 * Add labels for categories (bug, dev, arch)
 * Add person/member for assignment
 * Show actively being worked on
-* /trello 200
-* Make live not use uid prefix, and update fb trigger.
+* Update fb trigger for live not using a uid prefix.
