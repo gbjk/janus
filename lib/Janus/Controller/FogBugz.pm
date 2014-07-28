@@ -67,7 +67,6 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
             return "{message:'Ignoring completed case'}";
             }
         }
-    return "foo";
 
     unless ($trello_id){
         my $card = WebService::Trello::Card->new(
