@@ -31,6 +31,8 @@ has trello => (
     );
 
 method event (OX::Request $r){
+    return "Didn't provide an event" unless $r->content;
+
     my $event = decode_json $r->content;
 
     my $action = $event->{action};
