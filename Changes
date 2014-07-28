@@ -1,4 +1,4 @@
-NEXT
+0.0204
  - Return 200 for GET janus/trello
  - Remove uid prefix
 
