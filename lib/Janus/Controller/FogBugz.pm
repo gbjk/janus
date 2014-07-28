@@ -44,6 +44,31 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
     # Do I already have a trello?
     my $trello_id = $case->trello_id;
 
+    if ($case->status =~ /Closed|Resolved/){
+        $self->debug("Case is resovled or closed, cleaning up, trello id: $trello_id");
+        if ($trello_id){
+
+            # Delete it off the case upfront
+            $case->trello_order("0");
+            $case->trello_id("0");
+            $case->update;
+
+            if (my $card = WebService::Trello::Card->get($trello_id)){
+                $self->debug("Deleting trello card $trello_id");
+                $card->delete;
+                return "{message:'Archived completed case in trello'}";
+                }
+            else {
+                $self->debug("trello card $trello_id doesn't appear to exist");
+                return "{message:'trello case $trello_id does not exist'}";
+                }
+            }
+        else {
+            return "{message:'Ignoring completed case'}";
+            }
+        }
+    return "foo";
+
     unless ($trello_id){
         my $card = WebService::Trello::Card->new(
             name    => 'FB' . $case->number . ': ' . $case->title,
