@@ -1,3 +1,7 @@
+0.0204
+ - Return 200 for GET janus/trello
+ - Remove uid prefix
+
 0.0203
  - Fix init script bombing on the pidfile dir already existing
 0.0202

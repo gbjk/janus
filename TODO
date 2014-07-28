@@ -2,3 +2,7 @@
 * Work out where our config file should live
 * If the event that's triggering this includes a "trello_id set to blank", then don't act at all.
 * Add script to generate Trello Webhook
+* Add labels for categories (bug, dev, arch)
+* Add person/member for assignment
+* Show actively being worked on
+* Update fb trigger for live not using a uid prefix.
