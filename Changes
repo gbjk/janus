@@ -1,3 +1,6 @@
+0.0301
+ - Bump version requirement of WebService::Trello
+
 0.0300
  - Handle closed/resolved cases, deleting from trello as needed
 
