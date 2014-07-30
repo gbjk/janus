@@ -9,6 +9,7 @@ use HTTP::Throwable::Factory qw/http_throw/;
 use Kavorka;
 use WebService::FogBugz::XML;
 use WebService::Trello::Card;
+use WebService::Trello::Organization;
 
 use common::sense;
 use namespace::sweep;
@@ -68,9 +69,35 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
             }
         }
 
-    unless ($trello_id){
+    my $assignee = $case->assignee->full_name;
+    my $org = WebService::Trello::Organization->new();
+    my $trello_member = $org->find_member_by_name( $assignee );
+
+    if ($trello_id) {
+        my $card = WebService::Trello::Card->get( $trello_id );
+
+        return "Didn't create anything" unless $card;
+
+        my $addmember = 1;
+        foreach my $member ($card->members) {
+            if ($member->id ne $trello_member->id) {
+                $card->delete_member( $member );
+                }
+            else {
+                $addmember = 0;
+                }
+            }
+
+        if ($addmember) {
+            $card->add_member( $trello_member );
+            }
+
+        return "Found a card, might've updated it";
+        }
+    else {
         my $card = WebService::Trello::Card->new(
             name    => 'FB' . $case->number . ': ' . $case->title,
+            members => [ $trello_member ],
             )->create;
         $case->trello_id( $card->id );
         $case->trello_order( $card->pos );

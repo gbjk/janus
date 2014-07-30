@@ -1,3 +1,7 @@
+NEXT
+ - Assign members to Trello cards based on the FB assignee.
+   NB: This works by matching aginst the user's full name
+
 0.0301
  - Bump version requirement of WebService::Trello
 
