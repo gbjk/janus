@@ -1,6 +1,8 @@
 NEXT
  - Assign members to Trello cards based on the FB assignee.
    NB: This works by matching aginst the user's full name
+ - Include FB link in description of created Trello Card
+ - Create janus user and config files
 
 0.0301
  - Bump version requirement of WebService::Trello
