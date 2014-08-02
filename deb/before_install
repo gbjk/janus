@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if ! grep -q ^janus: /etc/group; then /usr/sbin/groupadd janus; fi
+if ! grep -q ^janus: /etc/passwd; then /usr/sbin/useradd --home /home/janus -g janus janus; fi
+
+echo 'or1gcrf9hau1ng3m6sutlubhmvj6di' > /home/janus/.fb_auth_token
+
+cat <<EOF > /home/janus/.fb.conf
+url = https://thermeon.fogbugz.com/
+email = trello@thermeon.com
+EOF
+
+cat <<EOF > /home/janus/.trello.conf
+token = e4793b5ff0f922819dd8d583d9b147ca477d3121a3725eaa07845e5abbc326d1
+key   = 00212f47890ff70dc9ed276bec9a0b05
+EOF
