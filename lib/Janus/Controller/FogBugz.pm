@@ -71,6 +71,7 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
     unless ($trello_id){
         my $card = WebService::Trello::Card->new(
             name    => 'FB' . $case->number . ': ' . $case->title,
+            desc    => $case->url,
             )->create;
         $case->trello_id( $card->id );
         $case->trello_order( $card->pos );
