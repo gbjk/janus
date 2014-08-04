@@ -14,7 +14,7 @@ requires "LWP::Protocol::https";
 requires "Log::Dispatch";
 requires "Log::Dispatch::Message::Passing";
 requires "Message::Passing";
-requires "WebService::Trello" => "0.0300";
+requires "WebService::Trello" => "0.0301";
 requires "WebService::FogBugz::XML" => "1.0200";
 requires "Starman";
 requires "Sys::Hostname::FQDN";
