@@ -1,3 +1,6 @@
+NEXT
+ - Added logstash logging
+
 0.0401
  - Fix for attempting to create/modify cards with non-existant
    Trello members
