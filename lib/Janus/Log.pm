@@ -20,7 +20,7 @@ has log => (
     isa         => 'Log::Dispatch',
     is          => 'bare',
     lazy_build  => 1,
-    handles     => [qw/debug info warn error/],
+    handles     => [qw/debug info warn error critical/],
     );
 has upstream_hostname => (
     is      => 'ro',
