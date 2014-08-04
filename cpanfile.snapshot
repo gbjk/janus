@@ -1,5 +1,70 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  AnyEvent-7.07
+    pathname: M/ML/MLEHMANN/AnyEvent-7.07.tar.gz
+    provides:
+      AE undef
+      AE::Log::COLLECT undef
+      AE::Log::FILTER undef
+      AE::Log::LOG undef
+      AnyEvent 7.07
+      AnyEvent::Base 7.07
+      AnyEvent::CondVar 7.07
+      AnyEvent::CondVar::Base 7.07
+      AnyEvent::DNS undef
+      AnyEvent::Debug undef
+      AnyEvent::Debug::Backtrace undef
+      AnyEvent::Debug::Wrap undef
+      AnyEvent::Debug::Wrapped undef
+      AnyEvent::Debug::shell undef
+      AnyEvent::Handle undef
+      AnyEvent::IO undef
+      AnyEvent::IO::IOAIO undef
+      AnyEvent::IO::Perl undef
+      AnyEvent::Impl::Cocoa undef
+      AnyEvent::Impl::EV undef
+      AnyEvent::Impl::Event undef
+      AnyEvent::Impl::EventLib undef
+      AnyEvent::Impl::FLTK undef
+      AnyEvent::Impl::Glib undef
+      AnyEvent::Impl::IOAsync undef
+      AnyEvent::Impl::Irssi undef
+      AnyEvent::Impl::POE undef
+      AnyEvent::Impl::Perl undef
+      AnyEvent::Impl::Qt undef
+      AnyEvent::Impl::Qt::Io undef
+      AnyEvent::Impl::Qt::Timer undef
+      AnyEvent::Impl::Tk undef
+      AnyEvent::Log undef
+      AnyEvent::Log::COLLECT undef
+      AnyEvent::Log::Ctx undef
+      AnyEvent::Log::FILTER undef
+      AnyEvent::Log::LOG undef
+      AnyEvent::Loop undef
+      AnyEvent::Socket undef
+      AnyEvent::Strict undef
+      AnyEvent::TLS undef
+      AnyEvent::Util undef
+    requirements:
+      ExtUtils::MakeMaker 0
+  AnyEvent-Handle-UDP-0.043
+    pathname: L/LE/LEONT/AnyEvent-Handle-UDP-0.043.tar.gz
+    provides:
+      AnyEvent::Handle::UDP 0.043
+    requirements:
+      AnyEvent 0
+      AnyEvent::Socket 0
+      AnyEvent::Util 0
+      Carp 0
+      Module::Build::Tiny 0.030
+      Moo 1.001000
+      Scalar::Util 0
+      Socket 0
+      Symbol 0
+      namespace::clean 0
+      perl 5.006
+      strict 0
+      warnings 0
   Apache-LogFormat-Compiler-0.32
     pathname: K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.32.tar.gz
     provides:
@@ -303,6 +368,14 @@ DISTRIBUTIONS
       Term::ANSIColor 3
       Test::More 0.88
       version 0.77
+  Data-Record-0.02
+    pathname: O/OV/OVID/Data-Record-0.02.tar.gz
+    provides:
+      Data::Record 0.02
+    requirements:
+      Sub::Uplevel 0.09
+      Test::Exception 0.21
+      Test::More 0.6
   Data-Visitor-0.30
     pathname: D/DO/DOY/Data-Visitor-0.30.tar.gz
     provides:
@@ -1320,6 +1393,13 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Sub::Exporter::Progressive 0.001011
       perl 5.006
+  Devel-Hide-0.0009
+    pathname: F/FE/FERREIRA/Devel-Hide-0.0009.tar.gz
+    provides:
+      Devel::Hide 0.0009
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   Devel-StackTrace-1.34
     pathname: D/DR/DROLSKY/Devel-StackTrace-1.34.tar.gz
     provides:
@@ -1448,6 +1528,29 @@ DISTRIBUTIONS
       File::Spec 0
       strict 0
       warnings 0
+  File-ConfigDir-0.013
+    pathname: R/RE/REHSACK/File-ConfigDir-0.013.tar.gz
+    provides:
+      File::ConfigDir 0.013
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      File::Basename 0
+      File::Path 2.00
+      File::Spec 0
+      perl 5.008001
+  File-Find-Rule-0.33
+    pathname: R/RC/RCLAMP/File-Find-Rule-0.33.tar.gz
+    provides:
+      File::Find::Rule 0.33
+      File::Find::Rule::Test::ATeam undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      File::Find 0
+      File::Spec 0
+      Number::Compare 0
+      Test::More 0
+      Text::Glob 0.07
   File-HomeDir-1.00
     pathname: A/AD/ADAMK/File-HomeDir-1.00.tar.gz
     provides:
@@ -1522,6 +1625,25 @@ DISTRIBUTIONS
       Filesys::Notify::Simple 0.12
     requirements:
       ExtUtils::MakeMaker 6.30
+  Getopt-Long-Descriptive-0.097
+    pathname: R/RJ/RJBS/Getopt-Long-Descriptive-0.097.tar.gz
+    provides:
+      Getopt::Long::Descriptive 0.097
+      Getopt::Long::Descriptive::Opts 0.097
+      Getopt::Long::Descriptive::Usage 0.097
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.30
+      File::Basename 0
+      Getopt::Long 2.33
+      List::Util 0
+      Params::Validate 0.97
+      Scalar::Util 0
+      Sub::Exporter 0.972
+      Sub::Exporter::Util 0
+      overload 0
+      strict 0
+      warnings 0
   HTML-Parser-3.71
     pathname: G/GA/GAAS/HTML-Parser-3.71.tar.gz
     provides:
@@ -1896,6 +2018,42 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.52
       Test::More 0.82
       perl 5.00503
+  Log-Dispatch-2.41
+    pathname: D/DR/DROLSKY/Log-Dispatch-2.41.tar.gz
+    provides:
+      Log::Dispatch 2.41
+      Log::Dispatch::ApacheLog 2.41
+      Log::Dispatch::Base 2.41
+      Log::Dispatch::Code 2.41
+      Log::Dispatch::Email 2.41
+      Log::Dispatch::Email::MIMELite 2.41
+      Log::Dispatch::Email::MailSend 2.41
+      Log::Dispatch::Email::MailSender 2.41
+      Log::Dispatch::Email::MailSendmail 2.41
+      Log::Dispatch::File 2.41
+      Log::Dispatch::File::Locked 2.41
+      Log::Dispatch::Handle 2.41
+      Log::Dispatch::Null 2.41
+      Log::Dispatch::Output 2.41
+      Log::Dispatch::Screen 2.41
+      Log::Dispatch::Syslog 2.41
+      Log::Dispatch::TestUtil undef
+    requirements:
+      Class::Load 0
+      Dist::CheckConflicts 0.02
+      ExtUtils::MakeMaker 6.30
+      Params::Validate 0.15
+      Sys::Syslog 0.25
+  Log-Dispatch-Message-Passing-0.009
+    pathname: B/BO/BOBTFISH/Log-Dispatch-Message-Passing-0.009.tar.gz
+    provides:
+      Log::Dispatch::Message::Passing 0.009
+    requirements:
+      ExtUtils::MakeMaker 6.36
+      Log::Dispatch 0
+      Message::Passing 0.006
+      Scalar::Util 0
+      Test::More 0.88
   MRO-Compat-0.12
     pathname: B/BO/BOBTFISH/MRO-Compat-0.12.tar.gz
     provides:
@@ -1904,6 +2062,77 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.59
       Test::More 0.47
       perl 5.006
+  Message-Passing-0.114
+    pathname: A/AB/ABRAXXA/Message-Passing-0.114.tar.gz
+    provides:
+      Message::Passing 0.114
+      Message::Passing::DSL undef
+      Message::Passing::DSL::Factory undef
+      Message::Passing::Exception undef
+      Message::Passing::Exception::ConnectionDisconnected undef
+      Message::Passing::Exception::ConnectionTimeout undef
+      Message::Passing::Exception::Decoding undef
+      Message::Passing::Exception::Encoding undef
+      Message::Passing::Filter::All undef
+      Message::Passing::Filter::Decoder::Bzip2 undef
+      Message::Passing::Filter::Decoder::Crypt::CBC undef
+      Message::Passing::Filter::Decoder::Gzip undef
+      Message::Passing::Filter::Decoder::JSON undef
+      Message::Passing::Filter::Decoder::Null undef
+      Message::Passing::Filter::Delay undef
+      Message::Passing::Filter::Encoder::Bzip2 undef
+      Message::Passing::Filter::Encoder::Crypt::CBC undef
+      Message::Passing::Filter::Encoder::Gzip undef
+      Message::Passing::Filter::Encoder::JSON undef
+      Message::Passing::Filter::Encoder::Null undef
+      Message::Passing::Filter::Key undef
+      Message::Passing::Filter::Mangle undef
+      Message::Passing::Filter::Null undef
+      Message::Passing::Filter::T undef
+      Message::Passing::Filter::ToLogstash undef
+      Message::Passing::Input::FileTail undef
+      Message::Passing::Input::Null undef
+      Message::Passing::Input::STDIN undef
+      Message::Passing::Input::Socket::UDP undef
+      Message::Passing::Output::Callback undef
+      Message::Passing::Output::File undef
+      Message::Passing::Output::IO::Handle undef
+      Message::Passing::Output::Null undef
+      Message::Passing::Output::STDERR undef
+      Message::Passing::Output::STDOUT undef
+      Message::Passing::Output::Socket::UDP undef
+      Message::Passing::Output::Test undef
+      Message::Passing::Role::CLIComponent undef
+      Message::Passing::Role::ConnectionManager undef
+      Message::Passing::Role::Crypt::CBC undef
+      Message::Passing::Role::Filter undef
+      Message::Passing::Role::HasAConnection undef
+      Message::Passing::Role::HasErrorChain undef
+      Message::Passing::Role::HasHostnameAndPort undef
+      Message::Passing::Role::HasTimeoutAndReconnectAfter undef
+      Message::Passing::Role::HasUsernameAndPassword undef
+      Message::Passing::Role::Input undef
+      Message::Passing::Role::Output undef
+      Message::Passing::Role::Script undef
+    requirements:
+      AnyEvent 0
+      AnyEvent::Handle::UDP 0
+      Config::Any 0
+      DateTime 0
+      ExtUtils::MakeMaker 6.59
+      IO::Handle 0
+      JSON 2.0
+      Module::Runtime 0.013
+      Moo 0.091011
+      MooX::Options 3.71
+      MooX::Types::MooseLike 0.08
+      Package::Variant 1.001001
+      String::RewritePrefix 0
+      Sys::Hostname::Long 0
+      Task::Weaken 0
+      Try::Tiny 0
+      namespace::clean 0.23
+      perl 5.008004
   Module-Build-Tiny-0.036
     pathname: L/LE/LEONT/Module-Build-Tiny-0.036.tar.gz
     provides:
@@ -1943,6 +2172,19 @@ DISTRIBUTIONS
       Module::Runtime 0.012
       Try::Tiny 0
       strict 0
+      warnings 0
+  Module-Metadata-1.000024
+    pathname: E/ET/ETHER/Module-Metadata-1.000024.tar.gz
+    provides:
+      Module::Metadata 1.000024
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.30
+      Fcntl 0
+      File::Find 0
+      File::Spec 0
+      strict 0
+      version 0.87
       warnings 0
   Module-Pluggable-5.1
     pathname: S/SI/SIMONW/Module-Pluggable-5.1.tar.gz
@@ -1996,6 +2238,80 @@ DISTRIBUTIONS
       Role::Tiny 1.003003
       Scalar::Util 0
       strictures 1.004003
+  MooX-ConfigFromFile-0.003
+    pathname: R/RE/REHSACK/MooX-ConfigFromFile-0.003.tar.gz
+    provides:
+      MooX::ConfigFromFile 0.003
+      MooX::ConfigFromFile::Role 0.003
+    requirements:
+      Config::Any 0
+      Cwd 0
+      ExtUtils::MakeMaker 0
+      File::Basename 0
+      File::Find::Rule 0.30
+      File::Spec 0
+      FindBin 0
+      JSON 0
+      Moo 1.003
+      MooX::File::ConfigDir 0.002
+      Test::More 0
+      perl 5.008001
+  MooX-File-ConfigDir-0.003
+    pathname: R/RE/REHSACK/MooX-File-ConfigDir-0.003.tar.gz
+    provides:
+      MooX::File::ConfigDir 0.003
+    requirements:
+      ExtUtils::MakeMaker 0
+      File::ConfigDir 0.011
+      Moo::Role 1.003000
+      namespace::clean 0
+      perl 5.008001
+  MooX-Options-4.009
+    pathname: C/CE/CELOGEEK/MooX-Options-4.009.tar.gz
+    provides:
+      MooX::Options 4.009
+      MooX::Options::Descriptive 4.009
+      MooX::Options::Descriptive::Usage 4.009
+      MooX::Options::Role 4.009
+      TestNamespaceClean undef
+      t::lib::MooXCmdTest undef
+      t::lib::MooXCmdTest::Cmd::test1 undef
+      t::lib::MooXCmdTest::Cmd::test1::Cmd::test2 undef
+      t::lib::MooXCmdTest::Cmd::test3 undef
+    requirements:
+      Carp 0
+      Data::Record 0
+      Getopt::Long 2.38
+      Getopt::Long::Descriptive 0.091
+      JSON 0
+      MRO::Compat 0
+      Module::Build 0.3601
+      Module::Metadata 1.000019
+      Moo 1.003001
+      MooX::ConfigFromFile 0
+      Path::Class 0.32
+      Pod::Usage 0
+      Regexp::Common 0
+      Scalar::Util 0
+      Term::Size::Any 0
+      Text::WrapI18N 0
+      feature 0
+      overload 0
+      parent 0
+      perl 5.010
+      strict 0
+      warnings 0
+  MooX-Types-MooseLike-0.25
+    pathname: M/MA/MATEU/MooX-Types-MooseLike-0.25.tar.gz
+    provides:
+      MooX::Types::MooseLike 0.25
+      MooX::Types::MooseLike::Base 0.25
+    requirements:
+      ExtUtils::MakeMaker 0
+      Module::Runtime 0.012
+      Moo 0.09101
+      Test::Fatal 0.003
+      Test::More 0.96
   Moose-2.1210
     pathname: E/ET/ETHER/Moose-2.1210.tar.gz
     provides:
@@ -2561,6 +2877,13 @@ DISTRIBUTIONS
       POSIX 0
       Socket 0
       Time::HiRes 0
+  Number-Compare-0.03
+    pathname: R/RC/RCLAMP/Number-Compare-0.03.tar.gz
+    provides:
+      Number::Compare 0.03
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   OX-0.14
     pathname: D/DO/DOY/OX-0.14.tar.gz
     provides:
@@ -2694,6 +3017,17 @@ DISTRIBUTIONS
       XSLoader 0
       strict 0
       warnings 0
+  Package-Variant-1.002000
+    pathname: H/HA/HAARG/Package-Variant-1.002000.tar.gz
+    provides:
+      Package::Variant 1.002000
+      string 1.002000
+    requirements:
+      Carp 0
+      Import::Into 1
+      Module::Runtime 0.013
+      Test::Fatal 0
+      strictures 1
   PadWalker-1.98
     pathname: R/RO/ROBIN/PadWalker-1.98.tar.gz
     provides:
@@ -2778,6 +3112,31 @@ DISTRIBUTIONS
       lib 0
       strict 0
       warnings 0
+  Path-Class-0.33
+    pathname: K/KW/KWILLIAMS/Path-Class-0.33.tar.gz
+    provides:
+      Path::Class 0.33
+      Path::Class::Dir 0.33
+      Path::Class::Entity 0.33
+      Path::Class::File 0.33
+    requirements:
+      Carp 0
+      Cwd 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      File::Copy 0
+      File::Path 0
+      File::Spec 3.26
+      File::Temp 0
+      File::stat 0
+      IO::Dir 0
+      IO::File 0
+      Module::Build 0.3601
+      Perl::OSType 0
+      Scalar::Util 0
+      overload 0
+      parent 0
+      strict 0
   Path-Router-0.12
     pathname: D/DO/DOY/Path-Router-0.12.tar.gz
     provides:
@@ -2927,6 +3286,48 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.30
       File::Spec 0
       strict 0
+  Regexp-Common-2013031301
+    pathname: A/AB/ABIGAIL/Regexp-Common-2013031301.tar.gz
+    provides:
+      Regexp::Common 2013031301
+      Regexp::Common::CC 2010010201
+      Regexp::Common::Entry 2013031301
+      Regexp::Common::SEN 2010010201
+      Regexp::Common::URI 2010010201
+      Regexp::Common::URI::RFC1035 2010010201
+      Regexp::Common::URI::RFC1738 2010010201
+      Regexp::Common::URI::RFC1808 2010010201
+      Regexp::Common::URI::RFC2384 2010010201
+      Regexp::Common::URI::RFC2396 2010010201
+      Regexp::Common::URI::RFC2806 2010010201
+      Regexp::Common::URI::fax 2010010201
+      Regexp::Common::URI::file 2010010201
+      Regexp::Common::URI::ftp 2010010201
+      Regexp::Common::URI::gopher 2010010201
+      Regexp::Common::URI::http 2010010201
+      Regexp::Common::URI::news 2010010201
+      Regexp::Common::URI::pop 2010010201
+      Regexp::Common::URI::prospero 2010010201
+      Regexp::Common::URI::tel 2010010201
+      Regexp::Common::URI::telnet 2010010201
+      Regexp::Common::URI::tv 2010010201
+      Regexp::Common::URI::wais 2010010201
+      Regexp::Common::_support 2010010201
+      Regexp::Common::balanced 2013030901
+      Regexp::Common::comment 2010010201
+      Regexp::Common::delimited 2010010201
+      Regexp::Common::lingua 2010010201
+      Regexp::Common::list 2010010201
+      Regexp::Common::net 2013031301
+      Regexp::Common::number 2013031101
+      Regexp::Common::profanity 2010010201
+      Regexp::Common::whitespace 2010010201
+      Regexp::Common::zip 2010010201
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.00473
+      strict 0
+      vars 0
   Return-Type-0.003
     pathname: T/TO/TOBYINK/Return-Type-0.003.tar.gz
     provides:
@@ -3004,6 +3405,16 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 6.30
       IO::File 1.14
+  String-RewritePrefix-0.007
+    pathname: R/RJ/RJBS/String-RewritePrefix-0.007.tar.gz
+    provides:
+      String::RewritePrefix 0.007
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.30
+      Sub::Exporter 0.972
+      strict 0
+      warnings 0
   Sub-Exporter-0.987
     pathname: R/RJ/RJBS/Sub-Exporter-0.987.tar.gz
     provides:
@@ -3063,6 +3474,32 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       perl 5.006
+  Sub-Uplevel-0.24
+    pathname: D/DA/DAGOLDEN/Sub-Uplevel-0.24.tar.gz
+    provides:
+      Sub::Uplevel 0.24
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      File::Find 0
+      File::Temp 0
+      Test::More 0
+      constant 0
+      strict 0
+      warnings 0
+  Sys-Hostname-FQDN-0.11
+    pathname: M/MI/MIKER/Sys-Hostname-FQDN-0.11.tar.gz
+    provides:
+      Sys::Hostname::FQDN 0.11
+    requirements:
+      ExtUtils::MakeMaker 0
+  Sys-Hostname-Long-1.4
+    pathname: S/SC/SCOTT/Sys-Hostname-Long-1.4.tar.gz
+    provides:
+      Sys::Hostname::Long 1.4
+    requirements:
+      ExtUtils::MakeMaker 0
   Task-Weaken-1.04
     pathname: A/AD/ADAMK/Task-Weaken-1.04.tar.gz
     provides:
@@ -3073,6 +3510,25 @@ DISTRIBUTIONS
       Scalar::Util 1.14
       Test::More 0.42
       perl 5.005
+  Term-Size-Any-0.002
+    pathname: F/FE/FERREIRA/Term-Size-Any-0.002.tar.gz
+    provides:
+      Term::Size::Any 0.002
+    requirements:
+      Devel::Hide 0
+      ExtUtils::MakeMaker 0
+      Module::Load::Conditional 0
+      Term::Size::Perl 0
+      Test::More 0
+  Term-Size-Perl-0.029
+    pathname: F/FE/FERREIRA/Term-Size-Perl-0.029.tar.gz
+    provides:
+      Term::Size::Perl 0.029
+    requirements:
+      Exporter 0
+      ExtUtils::CBuilder 0
+      ExtUtils::MakeMaker 0
+      Test::More 0
   TermReadKey-2.32
     pathname: J/JS/JSTOWE/TermReadKey-2.32.tar.gz
     provides:
@@ -3151,6 +3607,17 @@ DISTRIBUTIONS
       Test::More 0
       Test::NoWarnings 0.02
       Test::Tester 0.04
+  Test-Exception-0.32
+    pathname: A/AD/ADIE/Test-Exception-0.32.tar.gz
+    provides:
+      Test::Exception 0.32
+    requirements:
+      Sub::Uplevel 0.18
+      Test::Builder 0.7
+      Test::Builder::Tester 1.07
+      Test::Harness 2.03
+      Test::More 0.7
+      Test::Simple 0.7
   Test-Fatal-0.013
     pathname: R/RJ/RJBS/Test-Fatal-0.013.tar.gz
     provides:
@@ -3294,6 +3761,25 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 6.36
       perl 5.005
+  Text-CharWidth-0.04
+    pathname: K/KU/KUBOTA/Text-CharWidth-0.04.tar.gz
+    provides:
+      Text::CharWidth 0.04
+    requirements:
+      ExtUtils::MakeMaker 0
+  Text-Glob-0.09
+    pathname: R/RC/RCLAMP/Text-Glob-0.09.tar.gz
+    provides:
+      Text::Glob 0.09
+    requirements:
+      Test::More 0
+  Text-WrapI18N-0.06
+    pathname: K/KU/KUBOTA/Text-WrapI18N-0.06.tar.gz
+    provides:
+      Text::WrapI18N 0.06
+    requirements:
+      ExtUtils::MakeMaker 0
+      Text::CharWidth 0.02
   Throwable-0.200011
     pathname: R/RJ/RJBS/Throwable-0.200011.tar.gz
     provides:
