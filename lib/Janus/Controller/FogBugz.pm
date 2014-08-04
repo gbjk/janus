@@ -78,9 +78,10 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
 
         return "Didn't create anything" unless $card;
 
-        my $addmember = 1;
+        my $addmember = defined $trello_member;
         foreach my $member ($card->members) {
-            if ($member->id ne $trello_member->id) {
+            # If we don't have a $trello_member from the FB assignee, remove all members.
+            if ((!defined $trello_member) || ($member->id ne $trello_member->id)) {
                 $card->delete_member( $member );
                 }
             else {
@@ -98,7 +99,7 @@ method case_event (OX::Request $r, Num $case_id, Num $event_id){
         my $card = WebService::Trello::Card->new(
             name    => 'FB' . $case->number . ': ' . $case->title,
             desc    => $case->url,
-            members => [ $trello_member ],
+            defined $trello_member ? (members => [ $trello_member ]) : (),
             )->create;
         $case->trello_id( $card->id );
         $case->trello_order( $card->pos );
